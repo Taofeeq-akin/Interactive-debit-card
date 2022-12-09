@@ -77,11 +77,25 @@ input:focus {
   border-radius: 9px;
 }
 
-.card-holder.success input {
+.card-holder.success input,
+.exp-details.success input,
+.cvc-code.success input {
   border-color: var(--success-color);
 }
 
-.card-holder.error input {
+/* .form-control.success input {
+  border-color: var(--success-color);
+} */
+
+/* .form-control.error input {
+  border-color: var(--error-color);
+} */
+
+.card-holder.error input,
+.exp-details.error input,
+.cvc-code.error input {
+  width: 90%;
+  margin-left: -1rem;
   border-color: var(--error-color);
 }
 
@@ -175,7 +189,7 @@ small {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6.2rem;
 }
 
 .filled-circle {
@@ -195,7 +209,7 @@ small {
 }
 
 .card-details .card-num {
-  font-size: 2rem;
+  font-size: 2.8rem;
   letter-spacing: 3px;
 }
 
