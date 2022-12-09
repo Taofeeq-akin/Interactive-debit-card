@@ -80,6 +80,8 @@ input:focus {
 .card-holder.success input,
 .exp-details.success input,
 .cvc-code.success input {
+  width: 90%;
+  margin-left: -1rem;
   border-color: var(--success-color);
 }
 
