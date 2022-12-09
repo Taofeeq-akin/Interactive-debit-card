@@ -1,0 +1,207 @@
+@import url(https://fonts.google.com/specimen/Space+Grotesk);
+
+:root {
+  --success-color: hsl(278, 94%, 30%);
+  --error-color: hsl(0, 100%, 66%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 72.5%;
+}
+
+body {
+  font-family: "Space Grotesk";
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.desktop-img {
+  width: 35%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.form {
+  padding: 0 5rem;
+  margin-left: 12rem;
+  width: 27rem;
+}
+
+.card-holder {
+  margin-bottom: 0.6rem;
+}
+
+input {
+  border: 1.5px solid #777;
+  border-radius: 5px;
+  color: hsl(270, 6%, 55%);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.card-holder input {
+  display: block;
+  width: 90%;
+  margin: 0.2rem 0;
+}
+
+input:focus {
+  outline: 0;
+  /* border-color: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)); */
+  border-color: hsl(249, 99%, 64%);
+  border-radius: 9px;
+}
+
+.card-holder.success input {
+  border-color: var(--success-color);
+}
+
+.card-holder.error input {
+  border-color: var(--error-color);
+}
+
+.card-holder label,
+.card-dates label {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 1rem;
+  color: var(--error-color);
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.card-holder.error small {
+  visibility: visible;
+}
+
+.card-dates,
+.exp-date div {
+  display: flex;
+}
+.card-dates input {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.cvc-code {
+  margin-left: 1rem;
+}
+
+.cvc-code label {
+  display: block;
+}
+
+.cvc-code input {
+  width: 11rem;
+}
+
+.exp-date div input {
+  width: 4.5rem;
+  text-align: center;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: hsl(278, 68%, 11%);
+  width: 98%;
+  display: block;
+  padding: 1rem;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+}
+
+.form button:hover {
+  background-color: hsl(278, 94%, 30%);
+}
+
+.f-card,
+.b-card {
+  position: absolute;
+  width: 29%;
+  box-shadow: 20px 10px 20px hsl(270, 3%, 87%);
+}
+
+.f-card {
+  left: 15%;
+  top: 15%;
+}
+
+.b-card {
+  left: 20%;
+  top: 53%;
+}
+
+.card-details {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  z-index: 100;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  padding: 1.7rem;
+}
+
+.circle-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.filled-circle {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.outline-circle {
+  width: 0.3rem;
+  height: 0.3rem;
+  padding: 0.3rem;
+  border: solid 1px #fff;
+  border-radius: 50%;
+}
+
+.card-details .card-num {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.card-name-con {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
