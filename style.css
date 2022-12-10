@@ -115,7 +115,8 @@ small {
 }
 
 .card-holder.error small,
-.exp-date.error small {
+.exp-date.error small,
+.cvc-code.error small {
   visibility: visible;
 }
 

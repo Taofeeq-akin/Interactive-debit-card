@@ -19,7 +19,7 @@ const showError = (input, message) => {
 // show success message
 const showSuccess = (input) => {
   const formControl = input.parentElement;
-  formControl.className = "card-holder exp-details cvc-code success";
+  formControl.className = "card-holder exp-date cvc-code success";
 };
 
 //   card num valid
@@ -74,5 +74,16 @@ form.addEventListener("submit", function (e) {
     expYear.value.length !== 2
   ) {
     showError(expYear, "Input valid expire card date");
-  } else showSuccess(expYear);
+  } else {
+    showSuccess(expYear);
+  }
+
+  // Validation for cvc number
+  if (cvcCode.value.length !== 3) {
+    showError(cvcCode, "Insert correct cvc code");
+  } else {
+    showSuccess(cvcCode);
+  }
+
+  console.log(cvcCode.value)
 });
