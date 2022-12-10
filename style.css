@@ -78,7 +78,7 @@ input:focus {
 }
 
 .card-holder.success input,
-.exp-details.success input,
+.exp-date.success input,
 .cvc-code.success input {
   width: 90%;
   margin-left: -1rem;
@@ -94,7 +94,7 @@ input:focus {
 } */
 
 .card-holder.error input,
-.exp-details.error input,
+.exp-date.error input,
 .cvc-code.error input {
   width: 90%;
   margin-left: -1rem;
@@ -114,7 +114,8 @@ small {
   visibility: hidden;
 }
 
-.card-holder.error small {
+.card-holder.error small,
+.exp-date.error small {
   visibility: visible;
 }
 
