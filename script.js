@@ -6,6 +6,7 @@ const cardNumber = document.querySelector(".card-number");
 const expMonth = document.querySelector(".exp-month");
 const expYear = document.querySelector(".exp-year");
 const cvcCode = document.querySelector(".cvc");
+const ExpInputParent = document.querySelector(".exp-date");
 // const small = document.getElementsByTagName("small");
 
 // show error meessage
@@ -73,7 +74,7 @@ form.addEventListener("submit", function (e) {
     expYear == "" ||
     expYear.value.length !== 2
   ) {
-    showError(expYear, "Input valid expire card date");
+    showError(ExpInputParent, "Input valid expire card date");
   } else {
     showSuccess(expYear);
   }
@@ -84,6 +85,4 @@ form.addEventListener("submit", function (e) {
   } else {
     showSuccess(cvcCode);
   }
-
-  console.log(cvcCode.value)
 });
