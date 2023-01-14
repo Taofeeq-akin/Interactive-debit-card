@@ -69,7 +69,8 @@ form.addEventListener("submit", function (e) {
     showError(ExpInputParent, "Invalid dates");
   } else {
     showSuccess(expYear);
-    
+    expMonth.value = "";
+    expYear.value = "";
   }
 
   // Validation for cvc number
@@ -77,5 +78,6 @@ form.addEventListener("submit", function (e) {
     showError(cvcCode, "Insert correct cvc code");
   } else {
     showSuccess(cvcCode);
+    cvcCode.value = "";
   }
 });
