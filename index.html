@@ -14,10 +14,6 @@
 
     <title>Frontend Mentor | Interactive card details form</title>
     <link rel="stylesheet" href="./style.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://fonts.google.com/specimen/Space+Grotesk"
-    /> -->
   </head>
   <body>
     <div class="container">
@@ -42,30 +38,28 @@
           <div class="card-holder form-control">
             <label for="Card number">CARD NUMBER</label>
             <input
-              type="number"
+              type="text"
               placeholder="e.g 1234 5678 9123 0000"
               class="card-number"
             />
             <small>Error message</small>
           </div>
-          <div>
-            <div class="card-dates">
-              <div class="exp-date">
-                <label for="Exp. Date">Exp. Date (MM/YY)</label>
-                <div class="">
-                  <input type="number" placeholder="MM" class="exp-month" />
-                  <input type="number" placeholder="YY" class="exp-year" />
-                </div>
-                <small>Error message</small>
+
+          <div class="card-dates">
+            <div class="exp-date form-control">
+              <label for="Exp. Date">Exp. Date (MM/YY)</label>
+              <div>
+                <input type="text" placeholder="MM" class="exp-month" />
+                <input type="text" placeholder="YY" class="exp-year" />
               </div>
-              <div class="cvc-code form-control">
-                <label for="CVC">CVC</label>
-                <input type="number" placeholder="e.g 123" class="cvc" />
-                <small>Error message</small>
-              </div>
+              <small>Error message</small>
+            </div>
+            <div class="cvc-code form-control">
+              <label for="CVC">CVC</label>
+              <input type="text" placeholder="e.g 123" class="cvc" />
+              <small>Error message</small>
             </div>
           </div>
-
           <button>Confirm</button>
         </form>
 

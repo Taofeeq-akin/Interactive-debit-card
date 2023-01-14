@@ -12,7 +12,7 @@ const ExpInputParent = document.querySelector(".exp-date");
 // show error meessage
 const showError = (input, message) => {
   const formControl = input.parentElement;
-  formControl.className = "card-holder exp-date cvc-code error";
+  formControl.className = "card-holder exp-date cvc-code form-control error";
   const small = formControl.querySelector("small");
   small.innerText = message;
 };
@@ -20,7 +20,7 @@ const showError = (input, message) => {
 // show success message
 const showSuccess = (input) => {
   const formControl = input.parentElement;
-  formControl.className = "card-holder exp-date cvc-code success";
+  formControl.className = "card-holder exp-date cvc-code form-control success";
 };
 
 //   card num valid
@@ -58,25 +58,18 @@ form.addEventListener("submit", function (e) {
     showError(userName, "Input your card name");
   } else {
     showSuccess(userName);
+    userName.value = "";
   }
 
   // Card num validation
-  ValidateCreditCardNumber();
+  // ValidateCreditCardNumber();
 
   // Valid month and year
-  if (
-    expMonth.value < 1 ||
-    expMonth.value > 31 ||
-    expMonth == "" ||
-    expMonth.value.length !== 2 ||
-    expYear.value < 1 ||
-    expYear.value > 12 ||
-    expYear == "" ||
-    expYear.value.length !== 2
-  ) {
-    showError(ExpInputParent, "Input valid expire card date");
+  if (expMonth.value.length !== 2 || expYear.value.length !== 2) {
+    showError(ExpInputParent, "Invalid dates");
   } else {
     showSuccess(expYear);
+    
   }
 
   // Validation for cvc number

@@ -13,12 +13,17 @@ html {
 }
 
 @font-face {
-  font-family: spaceGrotesk;
+  font-family: spaceGrotesk-medium;
   src: url(./static/SpaceGrotesk-Medium.ttf);
 }
 
+@font-face {
+  font-family: spaceGrotesk-light;
+  src: url(./static/SpaceGrotesk-Regular.ttf);
+}
+
 body {
-  font-family: spaceGrotesk;
+  font-family: spaceGrotesk-medium;
   font-weight: 500;
 }
 
@@ -91,20 +96,23 @@ input:focus {
   border-color: var(--success-color);
 }
 
-/* .form-control.success input {
-  border-color: var(--success-color);
-} */
+.exp-date.error input {
+  width: 20%;
+}
 
-/* .form-control.error input {
-  border-color: var(--error-color);
-} */
-
-.card-holder.error input
-/* .exp-date.error input, */
-/* .cvc-code.error input */ {
+.card-holder.error input,
+.cvc-code.error input {
   width: 90%;
-  /* margin-left: -1rem; */
+  /* margin-left: -1rem;
+  border-color: var(--error-color); */
+}
+
+.card-holder.error input,
+.cvc-code.error input,
+.exp-date.error input {
+  margin-left: -1rem;
   border-color: var(--error-color);
+  display: block;
 }
 
 .card-holder label,
@@ -121,15 +129,17 @@ small {
 }
 
 .card-holder.error small,
-/* .exp-date.error small, */
+.exp-date.error small,
 .cvc-code.error small {
   visibility: visible;
+  font-family: spaceGrotesk-light;
 }
 
 .card-dates,
 .exp-date div {
   display: flex;
 }
+
 .card-dates input {
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
@@ -219,7 +229,7 @@ small {
 }
 
 .card-details .card-num {
-  font-size: 2.8rem;
+  font-size: 2.22rem;
   letter-spacing: 3px;
 }
 
@@ -241,10 +251,10 @@ small {
     margin: 0;
   }
 
-  /* .desktop-img {
+  .desktop-img {
     background-image: url(./images/bg-main-mobile.png);
     background-position: center;
     background-size: cover;
     width: 100%;
-  } */
+  }
 }
